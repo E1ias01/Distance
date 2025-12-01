@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Love</title>
+    <title>For Miss April</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -14,13 +14,13 @@
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #ffd1dc, #ffb7c5);
+            background: linear-gradient(135deg, #ffffff, #ffffff);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             overflow-x: hidden;
-            color: #8a1c4a;
+            color: #9e0000;
         }
         
         /* Password Modal */
@@ -30,7 +30,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 182, 193, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -54,13 +54,13 @@
             font-family: 'Dancing Script', cursive;
             font-size: 32px;
             margin-bottom: 20px;
-            color: #d81b60;
+            color: #9e0000;
         }
         
         .password-input {
             width: 100%;
             padding: 12px;
-            border: 2px solid #ffb7c5;
+            border: 2px solid #9e0000;
             border-radius: 10px;
             margin-bottom: 15px;
             font-size: 16px;
@@ -70,11 +70,11 @@
         }
         
         .password-input:focus {
-            border-color: #d81b60;
+            border-color: #9e0000;
         }
         
         .submit-btn {
-            background: #d81b60;
+            background: #9e0000;
             color: white;
             border: none;
             padding: 12px 25px;
@@ -96,7 +96,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #ffd1dc, #ffb7c5);
+            background: linear-gradient(135deg, #ffffff, #ffffff);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -122,6 +122,92 @@
             margin-top: 50px;
         }
         
+        /* Long Distance Box */
+        .long-distance-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #fff5f7;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            border: 2px solid #ffb7c5;
+        }
+
+        .distance-display {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            position: relative;
+            background: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .country-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #d81b60;
+            transition: transform 0.3s ease;
+        }
+
+        .country-img:hover {
+            transform: scale(1.1);
+        }
+
+        .airplane-icon {
+            font-size: 30px;
+            color: #d81b60;
+            animation: fly 3s ease-in-out infinite;
+            transform: rotate(45deg); /* To make it look like it's flying diagonally */
+            display: inline-block;
+        }
+
+        .distance-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #9e0000;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .clocks-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 15px;
+        }
+
+        .clock-item {
+            text-align: center;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            min-width: 120px;
+        }
+
+        .clock-item h4 {
+            font-size: 16px;
+            color: #d81b60;
+            margin-bottom: 5px;
+        }
+
+        .clock-item p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            font-weight: 700;
+            color: #9e0000;
+        }
+        
+        /* Tabs and Content */
         .tabs {
             display: flex;
             justify-content: center;
@@ -210,49 +296,177 @@
             max-height: 500px;
         }
         
-        /* Music Tab */
-        .song {
-            background: #f8e8ee;
-            padding: 15px;
-            border-radius: 10px;
+        /* NEW: Mood Check Style (Replacing Music) */
+        .mood-journal-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mood-input-section {
+            background: #fce4ec;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border: 1px solid #ffb7c5;
+            text-align: center;
+        }
+
+        .mood-input-section h3 {
+            font-size: 20px;
+            color: #9e0000;
+            margin-bottom: 15px;
+        }
+
+        .mood-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .mood-icon {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            opacity: 0.6;
+            border: 2px solid transparent;
+        }
+
+        .mood-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .mood-icon.selected {
+            opacity: 1;
+            transform: scale(1.2);
+            border-color: #d81b60;
+            background-color: rgba(216, 27, 96, 0.1);
+        }
+
+        .event-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d81b60;
+            border-radius: 8px;
+            resize: vertical;
+            min-height: 80px;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+
+        .post-button {
+            background: #d81b60;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .post-button:hover {
+            background: #9e0000;
+        }
+
+        .journal-list {
+            list-style: none;
+            padding-left: 0;
+            background: #fff5f7;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #ffb7c5;
+        }
+
+        .journal-list h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            color: #9e0000;
+            margin-bottom: 15px;
+        }
+
+        .journal-entry {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ffb7c5;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .journal-entry:last-child {
+            border-bottom: none;
+        }
+
+        .entry-mood {
+            font-size: 30px;
+            flex-shrink: 0;
+        }
+
+        .entry-content p {
+            font-size: 14px;
+            color: #444;
+        }
+
+        .entry-content .entry-meta {
+            font-size: 11px;
+            color: #888;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        /* End NEW Mood Check Style */
+
+        /* Our World Tab (Previously Notes) */
+        .world-section {
+            background: #fce4ec;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #d81b60;
+        }
+
+        .world-section h3 {
+            font-size: 22px;
+            color: #9e0000;
+            border-bottom: 2px solid #ffb7c5;
+            padding-bottom: 8px;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
         }
-        
-        .song-icon {
-            font-size: 24px;
-            color: #d81b60;
+
+        .world-list {
+            list-style: none;
+            padding-left: 0;
         }
-        
-        .song-info h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
+
+        .world-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ffb7c5;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        
-        .song-info p {
-            color: #888;
-            font-size: 14px;
+
+        .world-list li:last-child {
+            border-bottom: none;
         }
-        
-        /* Notes Tab */
-        .note {
-            background: #fce4ec;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 4px solid #d81b60;
-        }
-        
+
         /* Gallery Tab */
-        .gallery {
+        .gallery, .gallerys {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
         }
         
-        .gallery-item {
+        .gallery-item, .gallerys-item {
             border-radius: 10px;
             overflow: hidden;
             height: 200px;
@@ -260,17 +474,17 @@
             transition: transform 0.3s ease;
         }
         
-        .gallery-item:hover {
+        .gallery-item:hover, .gallerys-item:hover {
             transform: scale(1.05);
         }
         
-        .gallery-item img {
+        .gallery-item img, .gallerys-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
         
-        /* Decorative Elements */
+        /* Decorative Elements & Animations */
         .heart, .teddy-bear {
             position: absolute;
             z-index: -1;
@@ -289,7 +503,6 @@
             animation: float 8s ease-in-out infinite;
         }
         
-        /* Animations */
         @keyframes bounceIn {
             0% { transform: scale(0.8); opacity: 0; }
             60% { transform: scale(1.05); }
@@ -312,6 +525,12 @@
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0px); }
         }
+
+        @keyframes fly {
+            0% { transform: translateX(-5px) rotate(45deg); }
+            50% { transform: translateX(5px) rotate(45deg); }
+            100% { transform: translateX(-5px) rotate(45deg); }
+        }
         
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -329,46 +548,75 @@
                 justify-content: center;
             }
             
-            .gallery {
+            .gallery, .gallerys {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .clocks-container {
+                flex-direction: column;
+                gap: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Password Modal -->
     <div class="password-modal" id="passwordModal">
         <div class="password-content">
             <h2>Enter the secret code</h2>
-            <input type="password" class="password-input" id="passwordInput" placeholder="Our special word...">
+            <input type="password" class="password-input" id="passwordInput" placeholder="Your nickname...">
             <button class="submit-btn" id="submitPassword">Enter</button>
         </div>
     </div>
     
-    <!-- Welcome Screen -->
     <div class="welcome-screen" id="welcomeScreen">
-        <h1 class="welcome-message">Welcome my love, enjoy your stay</h1>
+        <h1 class="welcome-message">Welcome miss, enjoy your stay</h1>
     </div>
     
-    <!-- Main Content -->
     <div class="container" id="mainContent" style="display: none;">
+        <div class="long-distance-box">
+            <h3>Distance is just a number ❤️</h3>
+            
+            <div class="distance-display">
+                <img src="https://media.cdnws.com/_i/4335/290/359/92/drapeau-france-2.png" alt="Flag of France" class="country-img">
+                
+                <span class="distance-text">
+                    <span class="airplane-icon">✈️</span> 
+                    <br>
+                    11400 km
+                </span>
+                
+                <img src="https://static.vecteezy.com/ti/vecteur-libre/p1/7095839-philippines-realiste-agitant-drapeau-illustrationle-national-pays-fond-symbole-jour-de-l-independance-gratuit-vectoriel.jpg" alt="Flag of Philippines" class="country-img">
+            </div>
+
+            <div class="clocks-container">
+                <div class="clock-item">
+                    <h4>France (Perpignan)</h4>
+                    <p id="time-france">--:--:--</p>
+                </div>
+                <div class="clock-item">
+                    <h4>Philippines (Mindanao)</h4>
+                    <p id="time-philippines">--:--:--</p>
+                </div>
+            </div>
+        </div>
         <div class="tabs">
             <button class="tab active" data-tab="love-letter">
                 <span>❤️</span> Love Letter
             </button>
             <button class="tab" data-tab="music">
-                <span>🎵</span> Music
-            </button>
+                <span>☀️</span> Mood Check </button>
             <button class="tab" data-tab="notes">
-                <span>📝</span> Notes
+                <span>🌍</span> Our World
             </button>
             <button class="tab" data-tab="gallery">
-                <span>🌷</span> Gallery
+                <span>🌷</span> Gallery Flowers
+            </button>
+            <button class="tab" data-tab="gallerys">
+                <span>📅</span> Idea Date
             </button>
         </div>
         
         <div class="content-area">
-            <!-- Love Letter Tab -->
             <div class="tab-content active" id="love-letter">
                 <h2>My Dearest</h2>
                 <div class="letter" id="loveLetter">
@@ -377,50 +625,76 @@
                         <span>👇 Click to open</span>
                     </div>
                     <div class="letter-content">
-                        <p>My love,</p>
-                        <p>Every day with you feels like a beautiful dream that I never want to wake up from. Your smile brightens my darkest days, and your laughter is my favorite melody.</p>
-                        <p>I cherish every moment we spend together, from our silly inside jokes to our deep conversations under the stars. You've shown me what true happiness feels like, and I'm forever grateful to have you in my life.</p>
-                        <p>No matter where life takes us, always remember that my heart belongs to you.</p>
-                        <p>Forever yours,</p>
-                        <p>Me</p>
+                        <p>Dear April,</p>
+                        <p>I wanted to tell you something very important to me, something you perhaps don't hear often enough. You are an extraordinary person!</p>
+                        <p>You are simply unique! Through your kindness, your personality, or simply your way of life, you bring an incomparable freshness to life.</p>
+                        <p>I deeply admire your ability to listen, without judgment and with such kindness. It's a rare gift, a true blessing for those lucky enough to know you!</p>
+                        <p>Know that I appreciate and cherish every moment spent writing to you. You have such a warm presence. You bring smiles and warmth to my life, which makes me want to write to you every day, even if the time difference is difficult!</p>
+                        <p>Stay the incredible person you are, April! You make the world a more beautiful place!</p>
+                        <p>With all my love,</p>
+                        <p>Elias</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Music Tab -->
             <div class="tab-content" id="music">
-                <h2>Songs that remind me of you</h2>
-                <div class="song">
-                    <div class="song-icon">🎵</div>
-                    <div class="song-info">
-                        <h4>Hiwaga</h4>
-                        <p>by Tatin DC</p>
+                <h2>☀️ Mood Check & Journal</h2>
+                <div class="mood-journal-container">
+                    
+                    <div class="mood-input-section">
+                        <h3>How are you feeling today?</h3>
+                        <div class="mood-icons" id="mood-icons">
+                            <span class="mood-icon" data-mood="😊">😊</span>
+                            <span class="mood-icon" data-mood="😍">😍</span>
+                            <span class="mood-icon" data-mood="😌">😌</span>
+                            <span class="mood-icon" data-mood="😴">😴</span>
+                            <span class="mood-icon" data-mood="😔">😔</span>
+                            <span class="mood-icon" data-mood="🥳">🥳</span>
+                        </div>
+                        <textarea id="event-input" class="event-input" placeholder="Write down a small event, a thought, or why you feel this way today (e.g., 'Stressed about work', 'Saw a cute dog')..."></textarea>
+                        <button class="post-button" onclick="addMoodEntry()">Save Today's Check-in</button>
+                        <input type="hidden" id="selected-mood">
                     </div>
-                </div>
-                <div class="song">
-                    <div class="song-icon">🎵</div>
-                    <div class="song-info">
-                        <h4>Wish</h4>
-                        <p>by 16</p>
-                    </div>
+
+                    <ul class="journal-list">
+                        <h3>Previous Entries</h3>
+                        <li class="journal-entry">
+                        </li>
+                    </ul>
                 </div>
             </div>
             
-            <!-- Notes Tab -->
             <div class="tab-content" id="notes">
-                <h2>Some reminders</h2>
-                <div class="note">
-                    <p>Take care always</p>
+                <h2>Our World 🌍</h2>
+
+                <div class="world-section">
+                    <h3><span role="img" aria-label="April's favorite things">👸</span> What I Love About You</h3>
+                    <ul class="world-list">
+                        <li>💖 Your amazing character and ability to make me smile.</li>
+                        <li>💬 Your deep listening skills and thoughtful responses.</li>
+                        <li>☀️ Your unwavering kindness and patience.</li>
+                    </ul>
                 </div>
-                <div class="note">
-                    <p>Eat on time</p>
+
+                <div class="world-section">
+                    <h3><span role="img" aria-label="Elias's favorite things">👑</span> What I Love</h3>
+                    <ul class="world-list">
+                        <li>🎮 Spending time with you.</li>
+                        <li>📖 Reading and learning new things about you.</li>
+                        <li>💻 Coding and building things like this page for you!</li>
+                        <li>💤 Staying up late to talk to you.</li>
+                    </ul>
                 </div>
-                <div class="note">
-                    <p>You're mine.. always</p>
+
+                <div class="world-section">
+                    <h3><span role="img" aria-label="Shared things">🤝</span> What We Share</h3>
+                    <ul class="world-list">
+                        <li>🗣️ Our conversations involve several different time zones.</li>
+                        <li>✈️ The dream of future travels and meeting soon.</li>
+                    </ul>
                 </div>
             </div>
             
-            <!-- Gallery Tab -->
             <div class="tab-content" id="gallery">
                 <h2>Flowers for you</h2>
                 <div class="gallery">
@@ -428,13 +702,13 @@
                         <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1eaad721-3375-4d97-a5fa-cbf8a87d60b8.png" alt="Bouquet of delicate pink roses with soft green leaves">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/73632299-5dde-4ded-805a-88a7dcb4b5e4.png" alt="Beautiful pink tulips in a glass vase with morning dew">
+                        <img src="https://www.aquaportail.com/pictures1106/phones/anemone-clown_1307889811-fleur.jpg" alt="Beautiful pink tulips in a glass vase with morning dew">
                     </div>
                     <div class="gallery-item">
                         <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e9890063-b481-46f6-97a1-9fc753211e19.png" alt="Fluffy pink peony flowers with lush foliage">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4bc3dffd-4971-4223-b7e4-3699d2b97bbe.png" alt="Branch of pink cherry blossoms against a blue sky">
+                        <img src="https://i.123fleurs.com/18/images/produits/bouquet-douceur-de-tulipes-et-roses-livraison-123fleurs-430x430-56009-2.jpg" alt="Branch of pink cherry blossoms against a blue sky">
                     </div>
                     <div class="gallery-item">
                         <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d0daff3c-1751-492b-9b74-de28ac48d384.png" alt="Cluster of light pink carnations with delicate petals">
@@ -444,10 +718,34 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="tab-content" id="gallerys">
+                <h2>Idea Date Gallery</h2>
+                <div class="gallerys">
+                    <div class="gallerys-item">
+                        <img src="https://i.pinimg.com/736x/ba/1c/df/ba1cdf54016c9b94e42d01677154b94a.jpg" alt="Bouquet of delicate pink roses with soft green leaves">
+                    </div>
+                    <div class="gallerys-item">
+                        <img src="https://www.radiofrance.fr/pikapi/images/5b5a3d8d-9654-4ebb-9a99-5f8e6169c6c6/1200x680?webp=false" alt="Beautiful pink tulips in a glass vase with morning dew">
+                    </div>
+                    <div class="gallerys-item">
+                        <img src="https://m.media-amazon.com/images/I/71I40h1HSkL.jpg" alt="Fluffy pink peony flowers with lush foliage">
+                    </div>
+                    <div class="gallerys-item">
+                        <img src="https://static.wixstatic.com/media/11062b_1bcaa59caee54d73a3a8b36ce397f04b~mv2.jpeg/v1/fill/w_568,h_352,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_1bcaa59caee54d73a3a8b36ce397f04b~mv2.jpeg" alt="Branch of pink cherry blossoms against a blue sky">
+                    </div>
+                    <div class="gallerys-item">
+                        <img src="https://i.pinimg.com/236x/15/79/1b/15791ba31a49658303f0fb4bbef27a77.jpg" alt="Cluster of light pink carnations with delicate petals">
+                    </div>
+                    <div class="gallerys-item">
+                        <img src="https://woody.cloudly.space/app/uploads/tourisme-creuse/2022/01/thumbs/promeneurs-en-haut-de-chateaucout-christophe-pean-360x360-crop-1646995413.jpg" alt="Vibrant pink azalea flowers covering a garden bush">
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
     
-    <!-- Decorative elements -->
     <div class="heart" style="top: 10%; left: 5%;">❤️</div>
     <div class="heart" style="top: 20%; right: 10%;">❤️</div>
     <div class="heart" style="bottom: 15%; left: 15%;">❤️</div>
@@ -464,12 +762,16 @@
             const submitPassword = document.getElementById('submitPassword');
             
             submitPassword.addEventListener('click', function() {
-                if (passwordInput.value.toLowerCase() === 'babycakes') {
+                if (passwordInput.value.toLowerCase() === 'miss') { // Password: miss
                     passwordModal.style.opacity = '0';
                     setTimeout(() => {
                         passwordModal.style.display = 'none';
                         welcomeScreen.style.display = 'flex';
                         
+                        // Start clocks immediately after successful password check
+                        updateClocks();
+                        setInterval(updateClocks, 1000); // Update clocks every second
+
                         setTimeout(() => {
                             welcomeScreen.style.opacity = '0';
                             setTimeout(() => {
@@ -480,11 +782,11 @@
                     }, 500);
                 } else {
                     passwordInput.value = '';
-                    passwordInput.placeholder = 'Try again, my love...';
+                    passwordInput.placeholder = 'Try again, miss...';
                     passwordInput.style.borderColor = '#ff4d4d';
                     setTimeout(() => {
                         passwordInput.style.borderColor = '#ffb7c5';
-                        passwordInput.placeholder = 'Our special word...';
+                        passwordInput.placeholder = 'Your nickname...';
                     }, 1500);
                 }
             });
@@ -496,6 +798,33 @@
                 }
             });
             
+            // Function to update the clocks
+            function updateClocks() {
+                const now = new Date();
+                
+                // Options for time formatting
+                const options = { 
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    second: '2-digit', 
+                    hour12: false // 24-hour format
+                };
+
+                // Time for France (Perpignan / Europe/Paris)
+                const timeFrance = now.toLocaleTimeString('en-US', {
+                    timeZone: 'Europe/Paris',
+                    ...options
+                });
+                document.getElementById('time-france').textContent = timeFrance;
+
+                // Time for Philippines (Mindanao / Asia/Manila)
+                const timePhilippines = now.toLocaleTimeString('en-US', {
+                    timeZone: 'Asia/Manila',
+                    ...options
+                });
+                document.getElementById('time-philippines').textContent = timePhilippines;
+            }
+
             // Tab switching
             const tabs = document.querySelectorAll('.tab');
             const tabContents = document.querySelectorAll('.tab-content');
@@ -526,6 +855,9 @@
             
             // Add floating decorative elements
             function addFloatingElements() {
+                // Code for floating elements is already in HTML, but here is the JS if needed
+                // It seems your HTML already has the elements, so this function is technically redundant but kept for logic structure:
+                /*
                 for (let i = 0; i < 15; i++) {
                     const heart = document.createElement('div');
                     heart.classList.add('heart');
@@ -545,9 +877,70 @@
                     teddy.style.animationDelay = Math.random() * 5 + 's';
                     document.body.appendChild(teddy);
                 }
+                */
             }
             
-            addFloatingElements();
+            // addFloatingElements(); // Calling function removed since elements are in HTML
+
+            
+            // --- NOUVELLES FONCTIONS : Mood Check ---
+
+            // Selection de l'icône
+            document.querySelectorAll('#music .mood-icon').forEach(icon => {
+                icon.addEventListener('click', function() {
+                    // Désélectionner toutes les icônes de la section mood
+                    document.querySelectorAll('#music .mood-icon').forEach(i => i.classList.remove('selected'));
+                    // Sélectionner l'icône cliquée
+                    this.classList.add('selected');
+                    document.getElementById('selected-mood').value = this.textContent; // Sauvegarde l'emoji
+                });
+            });
+
+            // Fonction pour ajouter une entrée au journal
+            window.addMoodEntry = function() {
+                const moodEmoji = document.getElementById('selected-mood').value;
+                const eventText = document.getElementById('event-input').value.trim();
+                
+                if (!moodEmoji) {
+                    alert("Please select a mood icon first (Veuillez sélectionner une icône d'humeur d'abord)!");
+                    return;
+                }
+
+                if (eventText === "") {
+                    alert("Please write a small event or thought (Veuillez écrire un petit événement ou une pensée)!");
+                    return;
+                }
+
+                const journalList = document.querySelector('.journal-list');
+                const today = new Date();
+                const dateString = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+                const newEntry = document.createElement('li');
+                newEntry.classList.add('journal-entry');
+                newEntry.innerHTML = `
+                    <span class="entry-mood">${moodEmoji}</span>
+                    <div class="entry-content">
+                        <p>${eventText}</p>
+                        <p class="entry-meta">${dateString}</p>
+                    </div>
+                `;
+
+                // Ajoute la nouvelle entrée en haut de la liste (après le titre, s'il existe)
+                const firstEntry = journalList.querySelector('.journal-entry');
+                if (firstEntry) {
+                    journalList.insertBefore(newEntry, firstEntry);
+                } else {
+                    journalList.appendChild(newEntry); 
+                }
+                
+                // Réinitialiser les champs
+                document.getElementById('event-input').value = '';
+                document.getElementById('selected-mood').value = '';
+                document.querySelectorAll('#music .mood-icon').forEach(i => i.classList.remove('selected'));
+
+                // alert("Mood Check-in Saved!"); // Optionnel
+            }
+
         });
     </script>
 </body>
